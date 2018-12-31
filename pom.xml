@@ -1,0 +1,74 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>de.alpharogroup</groupId>
+		<artifactId>mvn-java-parent</artifactId>
+		<version>4.5</version>
+		<relativePath></relativePath>
+	</parent>
+
+	<artifactId>resource-bundles-view-model</artifactId>
+	<version>1</version>
+
+	<properties>
+		<!-- TEST-OBJECTS version -->
+		<test-objects.version>5</test-objects.version>
+		<!-- MEANBEAN version -->
+		<meanbean.version>2.0.3</meanbean.version>
+		<!-- JOBJECT-EXTENSIONS version -->
+		<jobject-extensions.version>2.5</jobject-extensions.version>
+		<jobject-evaluate.version>${jobject-extensions.version}</jobject-evaluate.version>
+	</properties>
+
+	<dependencyManagement>
+
+		<dependencies>
+			<!-- TEST-OBJECTS DEPENDENCY -->
+			<dependency>
+				<groupId>de.alpharogroup</groupId>
+				<artifactId>test-objects</artifactId>
+				<version>${test-objects.version}</version>
+			</dependency>
+			<!-- MEANBEAN DEPENDENCY -->
+			<dependency>
+				<groupId>org.meanbean</groupId>
+				<artifactId>meanbean</artifactId>
+				<version>${meanbean.version}</version>
+			</dependency>
+			<!-- JOBJECT-EVALUATE DEPENDENCY -->
+			<dependency>
+				<groupId>de.alpharogroup</groupId>
+				<artifactId>jobject-evaluate</artifactId>
+				<version>${jobject-evaluate.version}</version>
+			</dependency>
+
+		</dependencies>
+
+	</dependencyManagement>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>de.alpharogroup</groupId>
+			<artifactId>test-objects</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- MEANBEAN DEPENDENCY -->
+		<dependency>
+			<groupId>org.meanbean</groupId>
+			<artifactId>meanbean</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- JOBJECT-EVALUATE DEPENDENCY -->
+		<dependency>
+			<groupId>de.alpharogroup</groupId>
+			<artifactId>jobject-evaluate</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+</project>
