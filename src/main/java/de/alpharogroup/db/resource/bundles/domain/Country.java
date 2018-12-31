@@ -24,35 +24,44 @@
  */
 package de.alpharogroup.db.resource.bundles.domain;
 
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
+import de.alpharogroup.domain.NameDomainObject;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import lombok.experimental.FieldDefaults;
 
 /**
  * The domain class {@link Country} is keeping the information for all countries in the world
  */
 @Getter
 @Setter
-@ToString
-@EqualsAndHashCode
+@ToString(callSuper = true)
+@EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
-@AllArgsConstructor
-@Builder
-@FieldDefaults(level = AccessLevel.PRIVATE)
-public class Country 
+public class Country extends NameDomainObject<Integer>
 {
 
+	/** The serial Version UID. */
+	private static final long serialVersionUID = 1L;
 
 	/** The iso3166 name with two characters. */
-	String iso3166A2name;
+	private String iso3166A2name;
 
-	/** The name. */
-	String name;
+	/**
+	 * Instantiates a new countries.
+	 *
+	 * @param name
+	 *            the name
+	 * @param iso3166a2name
+	 *            the iso 3166 a 2 name
+	 */
+	@Builder
+	public Country(String name, String iso3166a2name)
+	{
+		super(name);
+		iso3166A2name = iso3166a2name;
+	}
 
 }

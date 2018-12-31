@@ -24,7 +24,7 @@
  */
 package de.alpharogroup.db.resource.bundles.domain;
 
-import lombok.AccessLevel;
+import de.alpharogroup.domain.VersionableBaseDomainObject;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
@@ -32,30 +32,32 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import lombok.experimental.FieldDefaults;
 
 /**
  * The class {@link BundleName}.
  */
 @Getter
 @Setter
-@ToString
-@EqualsAndHashCode
+@ToString(callSuper = true)
+@EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@FieldDefaults(level = AccessLevel.PRIVATE)
-public class BundleName
+public class BundleName extends VersionableBaseDomainObject<Integer>
 {
+	/**
+	 * The serialVersionUID.
+	 */
+	private static final long serialVersionUID = 1L;
 	/** The bundle name. */
-	BaseName baseName;
+	private BaseName baseName;
 
 	/** The filepath. */
-	String filepath;
+	private String filepath;
 
 	/** The locale. */
-	LanguageLocale locale;
+	private LanguageLocale locale;
 
 	/** The owner. */
-	BundleApplication owner;
+	private BundleApplication owner;
 }

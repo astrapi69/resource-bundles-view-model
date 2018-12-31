@@ -24,31 +24,38 @@
  */
 package de.alpharogroup.db.resource.bundles.domain;
 
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
+import de.alpharogroup.domain.VersionableNameBaseDomainObject;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import lombok.experimental.FieldDefaults;
 
 /**
  * The class {@link PropertiesValue}.
  */
 @Getter
 @Setter
-@ToString
-@EqualsAndHashCode
+@ToString(callSuper = true)
+@EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
-@AllArgsConstructor
-@Builder
-@FieldDefaults(level = AccessLevel.PRIVATE)
-public class PropertiesValue 
+public class PropertiesValue extends VersionableNameBaseDomainObject<Integer>
 {
+	/**
+	 * The serialVersionUID.
+	 */
+	private static final long serialVersionUID = 1L;
 
-	/** The name. */
-	String name;
-
+	/**
+	 * Instantiates a new {@link PropertiesValue} domain object.
+	 *
+	 * @param name
+	 *            the name
+	 */
+	@Builder
+	PropertiesValue(String name)
+	{
+		super(name);
+	}
 }

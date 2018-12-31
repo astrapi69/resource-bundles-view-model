@@ -14,6 +14,7 @@
 	<version>1</version>
 
 	<properties>
+		<domain-api.version>6.6-SNAPSHOT</domain-api.version>
 		<!-- TEST-OBJECTS version -->
 		<test-objects.version>5</test-objects.version>
 		<!-- MEANBEAN version -->
@@ -26,6 +27,12 @@
 	<dependencyManagement>
 
 		<dependencies>
+			<!-- DOMAIN-API DEPENDENCY -->
+			<dependency>
+				<groupId>de.alpharogroup</groupId>
+				<artifactId>domain-api</artifactId>
+				<version>${domain-api.version}</version>
+			</dependency>
 			<!-- TEST-OBJECTS DEPENDENCY -->
 			<dependency>
 				<groupId>de.alpharogroup</groupId>
@@ -50,7 +57,12 @@
 	</dependencyManagement>
 
 	<dependencies>
-
+		<!-- DOMAIN-API DEPENDENCY -->
+		<dependency>
+			<groupId>de.alpharogroup</groupId>
+			<artifactId>domain-api</artifactId>
+		</dependency>
+		<!-- TEST-OBJECTS DEPENDENCY -->
 		<dependency>
 			<groupId>de.alpharogroup</groupId>
 			<artifactId>test-objects</artifactId>

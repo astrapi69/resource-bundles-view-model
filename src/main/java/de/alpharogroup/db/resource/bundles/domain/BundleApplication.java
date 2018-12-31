@@ -26,7 +26,7 @@ package de.alpharogroup.db.resource.bundles.domain;
 
 import java.util.Set;
 
-import lombok.AccessLevel;
+import de.alpharogroup.domain.VersionableNameBaseDomainObject;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
@@ -34,34 +34,52 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import lombok.experimental.FieldDefaults;
 
 /**
  * The class {@link BundleApplication}.
  */
 @Getter
 @Setter
-@ToString
-@EqualsAndHashCode
+@ToString(callSuper = true)
+@EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
-@FieldDefaults(level = AccessLevel.PRIVATE)
-public class BundleApplication
+public class BundleApplication extends VersionableNameBaseDomainObject<Integer>
 {
+
+	/**
+	 * The serialVersionUID.
+	 */
+	private static final long serialVersionUID = 1L;
 
 	/**
 	 * The default locale of this bundle application.
 	 */
-	LanguageLocale defaultLocale;
+	private LanguageLocale defaultLocale;
 
 	/**
 	 * The supported locale objects that are mandatory for this bundle application.
 	 */
-	Set<LanguageLocale> supportedLocales;
-	
-	/** The name. */
-	String name;
+	private Set<LanguageLocale> supportedLocales;
 
+
+	/**
+	 * Instantiates a new {@link BundleApplication} domain object.
+	 *
+	 * @param name
+	 *            the name
+	 * @param bundleNames
+	 *            the bundle names
+	 * @param defaultLocale
+	 *            the default locale
+	 */
+	@Builder
+	BundleApplication(final String name, final LanguageLocale defaultLocale,
+		final Set<LanguageLocale> supportedLocales)
+	{
+		super(name);
+		this.defaultLocale = defaultLocale;
+		this.supportedLocales = supportedLocales;
+	}
 
 }
