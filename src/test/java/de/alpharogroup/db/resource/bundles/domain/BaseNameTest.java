@@ -33,6 +33,7 @@ import org.meanbean.test.BeanTester;
 import org.testng.annotations.Test;
 
 import de.alpharogroup.evaluate.object.evaluators.EqualsHashCodeAndToStringEvaluator;
+import io.github.benas.randombeans.api.EnhancedRandom;
 
 
 /**
@@ -55,17 +56,19 @@ public class BaseNameTest
 	 *             if a new instance of the bean's class cannot be instantiated
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred
-	 * @throws ClassNotFoundException 
+	 * @throws ClassNotFoundException
 	 *             occurs if a given class cannot be located by the specified class loader
 	 */
 	@Test
-	public void testEqualsHashcodeAndToStringWithClass() throws NoSuchMethodException,
-		IllegalAccessException, InvocationTargetException, InstantiationException, IOException, ClassNotFoundException
+	public void testEqualsHashcodeAndToStringWithClass()
+		throws NoSuchMethodException, IllegalAccessException, InvocationTargetException,
+		InstantiationException, IOException, ClassNotFoundException
 	{
 		boolean expected;
 		boolean actual;
-		actual = EqualsHashCodeAndToStringEvaluator
-			.evaluateEqualsHashcodeAndToString(BaseName.class);
+		actual = EqualsHashCodeAndToStringEvaluator.evaluateEqualsHashcodeAndToString(
+			BaseName.class,
+			clazz -> BaseName.builder().name(EnhancedRandom.random(String.class)).build());
 		expected = true;
 		assertEquals(expected, actual);
 	}
