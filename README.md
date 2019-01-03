@@ -3,6 +3,7 @@
 <div align="center">
 
 [![Build Status](https://travis-ci.org/astrapi69/resource-bundles-view-model.svg?branch=master)](https://travis-ci.org/astrapi69/resource-bundles-view-model) 
+[![Coverage Status](https://coveralls.io/repos/github/lightblueseas/resource-bundles-view-model/badge.svg?branch=develop)](https://coveralls.io/github/lightblueseas/resource-bundles-view-model?branch=master)
 [![Open Issues](https://img.shields.io/github/issues/astrapi69/resource-bundles-view-model.svg?style=flat)](https://github.com/astrapi69/resource-bundles-view-model/issues) 
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.alpharogroup/resource-bundles-view-model/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.alpharogroup/resource-bundles-view-model)
 [![Javadocs](http://www.javadoc.io/badge/de.alpharogroup/resource-bundles-view-model.svg)](http://www.javadoc.io/doc/de.alpharogroup/resource-bundles-view-model)

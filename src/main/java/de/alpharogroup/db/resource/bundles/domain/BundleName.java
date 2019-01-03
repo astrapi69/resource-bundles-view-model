@@ -49,7 +49,7 @@ public class BundleName extends VersionableBaseDomainObject<Integer>
 	 * The serialVersionUID.
 	 */
 	private static final long serialVersionUID = 1L;
-	
+
 	/** The bundle name. */
 	private BaseName baseName;
 
