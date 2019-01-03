@@ -11,10 +11,19 @@
 	</parent>
 
 	<artifactId>resource-bundles-view-model</artifactId>
-	<version>1.1-SNAPSHOT</version>
+	<version>1-SNAPSHOT</version>
+	<inceptionYear>2019</inceptionYear>
+
+	<name>${project.artifactId}</name>
+
+	<description>
+		This project holds view model classes for resource bundles objects
+	</description>
+
+	<url>https://github.com/astrapi69/${project.artifactId}</url>
 
 	<properties>
-		<domain-api.version>6.6-SNAPSHOT</domain-api.version>
+		<domain-api.version>6.6</domain-api.version>
 		<!-- TEST-OBJECTS version -->
 		<test-objects.version>5</test-objects.version>
 		<!-- MEANBEAN version -->
@@ -24,6 +33,31 @@
 		<jobject-evaluate.version>${jobject-extensions.version}</jobject-evaluate.version>
 	</properties>
 
+	<developers>
+
+		<developer>
+			<id>astrapi69</id>
+			<name>Asterios Raptis</name>
+			<roles>
+				<role>Project manager</role>
+				<role>Developer</role>
+			</roles>
+			<timezone>Berlin</timezone>
+		</developer>
+
+	</developers>
+
+	<scm>
+		<connection>scm:git:git:@github.com:astrapi69/${project.artifactId}.git</connection>
+		<developerConnection>scm:git:git@github.com:astrapi69/${project.artifactId}.git</developerConnection>
+		<url>git:@github.com:astrapi69/${project.artifactId}.git</url>
+	</scm>
+
+	<issueManagement>
+		<system>github.com</system>
+		<url>https://github.com/astrapi69/${project.artifactId}/issues</url>
+	</issueManagement>
+	
 	<dependencyManagement>
 
 		<dependencies>
