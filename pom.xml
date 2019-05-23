@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>de.alpharogroup</groupId>
 		<artifactId>mvn-java-parent</artifactId>
-		<version>4.5</version>
+		<version>5</version>
 		<relativePath></relativePath>
 	</parent>
 
@@ -25,12 +25,11 @@
 	<properties>
 		<domain-api.version>6.6</domain-api.version>
 		<!-- TEST-OBJECTS version -->
-		<test-objects.version>5</test-objects.version>
+		<test-objects.version>5.2</test-objects.version>
 		<!-- MEANBEAN version -->
 		<meanbean.version>2.0.3</meanbean.version>
-		<!-- JOBJECT-EXTENSIONS version -->
-		<jobject-extensions.version>2.5</jobject-extensions.version>
-		<jobject-evaluate.version>${jobject-extensions.version}</jobject-evaluate.version>
+		<!-- JOBJ-CONTRACT-VERIFIER version -->
+		<jobj-contract-verifier.version>3.2</jobj-contract-verifier.version>
 	</properties>
 
 	<developers>
@@ -79,11 +78,11 @@
 				<artifactId>meanbean</artifactId>
 				<version>${meanbean.version}</version>
 			</dependency>
-			<!-- JOBJECT-EVALUATE DEPENDENCY -->
+			<!-- JOBJ-CONTRACT-VERIFIER DEPENDENCY -->
 			<dependency>
 				<groupId>de.alpharogroup</groupId>
-				<artifactId>jobject-evaluate</artifactId>
-				<version>${jobject-evaluate.version}</version>
+				<artifactId>jobj-contract-verifier</artifactId>
+				<version>${jobj-contract-verifier.version}</version>
 			</dependency>
 
 		</dependencies>
@@ -96,6 +95,13 @@
 			<groupId>de.alpharogroup</groupId>
 			<artifactId>domain-api</artifactId>
 		</dependency>
+		<!-- TEST-SCOPE DEPENDENCIES -->
+		<!-- JOBJ-CONTRACT-VERIFIER DEPENDENCY -->
+		<dependency>
+			<groupId>de.alpharogroup</groupId>
+			<artifactId>jobj-contract-verifier</artifactId>
+			<scope>test</scope>
+		</dependency>
 		<!-- TEST-OBJECTS DEPENDENCY -->
 		<dependency>
 			<groupId>de.alpharogroup</groupId>
@@ -106,12 +112,6 @@
 		<dependency>
 			<groupId>org.meanbean</groupId>
 			<artifactId>meanbean</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<!-- JOBJECT-EVALUATE DEPENDENCY -->
-		<dependency>
-			<groupId>de.alpharogroup</groupId>
-			<artifactId>jobject-evaluate</artifactId>
 			<scope>test</scope>
 		</dependency>
 
