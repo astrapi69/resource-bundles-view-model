@@ -1,8 +1,19 @@
 ## Change log
 ----------------------
 
-Version 1.1-SNAPSHOT
+Version 1.1
 -------------
+
+ADDED:
+ 
+- new test dependency silly-collections added
+
+CHANGED:
+
+- update of parent version to 5
+- update of test-objects dependency version to 5.2
+- update of jobj-contract-verifier dependency version to 3.2
+- unit tests extended for improve code coverage
 
 Version 1
 -------------

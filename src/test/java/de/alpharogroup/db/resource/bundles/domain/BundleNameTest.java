@@ -25,16 +25,11 @@
 package de.alpharogroup.db.resource.bundles.domain;
 
 import static org.testng.Assert.assertNotNull;
-import static org.testng.AssertJUnit.assertEquals;
-
-import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 
 import org.meanbean.test.BeanTester;
 import org.testng.annotations.Test;
 
-import de.alpharogroup.evaluate.object.evaluators.EqualsHashCodeAndToStringEvaluator;
-import io.github.benas.randombeans.api.EnhancedRandom;
+import de.alpharogroup.evaluate.object.verifier.ContractVerifier;
 
 /**
  * The unit test class for the class {@link BundleName}
@@ -57,40 +52,6 @@ public class BundleNameTest
 	}
 
 	/**
-	 * Test method for {@link BundleName#equals(Object)} , {@link BundleName#hashCode()} and
-	 * {@link BundleName#toString()}
-	 *
-	 * @throws NoSuchMethodException
-	 *             if an accessor method for this property cannot be found
-	 * @throws IllegalAccessException
-	 *             if the caller does not have access to the property accessor method
-	 * @throws InvocationTargetException
-	 *             if the property accessor method throws an exception
-	 * @throws InstantiationException
-	 *             if a new instance of the bean's class cannot be instantiated
-	 * @throws IOException
-	 *             Signals that an I/O exception has occurred
-	 * @throws ClassNotFoundException
-	 *             occurs if a given class cannot be located by the specified class loader
-	 */
-	@Test
-	public void testEqualsHashcodeAndToStringWithClass()
-		throws NoSuchMethodException, IllegalAccessException, InvocationTargetException,
-		InstantiationException, IOException, ClassNotFoundException
-	{
-		boolean expected;
-		boolean actual;
-		actual = EqualsHashCodeAndToStringEvaluator.evaluateEqualsHashcodeAndToString(
-			BundleName.class,
-			clazz -> BundleName.builder()
-				.baseName(BaseName.builder().name(EnhancedRandom.random(String.class)).build())
-				.build());
-		expected = true;
-		assertEquals(expected, actual);
-	}
-
-
-	/**
 	 * Test method for {@link BundleName}
 	 */
 	@Test
@@ -98,5 +59,15 @@ public class BundleNameTest
 	{
 		final BeanTester beanTester = new BeanTester();
 		beanTester.testBean(BundleName.class);
+	}
+
+	/**
+	 * Test method for {@link BundleName#equals(Object)} , {@link BundleName#hashCode()} and
+	 * {@link BundleName#toString()}
+	 */
+	@Test
+	public void verifyEqualsHashcodeAndToStringContracts()
+	{
+		ContractVerifier.of(BundleName.class).verify();
 	}
 }

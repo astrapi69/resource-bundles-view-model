@@ -29,44 +29,48 @@ import static org.testng.AssertJUnit.assertNotNull;
 import org.meanbean.test.BeanTester;
 import org.testng.annotations.Test;
 
+import de.alpharogroup.collections.set.SetFactory;
 import de.alpharogroup.evaluate.object.verifier.ContractVerifier;
 
 /**
- * The unit test class for the class {@link BaseName}
+ * The unit test class for the class {@link BundleApplication}
  */
-public class BaseNameTest
+public class BundleApplicationTest
 {
 
 	/**
-	 * Test method for {@link BaseName} constructors and builders
+	 * Test method for {@link BundleApplication} constructors and builders
 	 */
 	@Test
 	public final void testConstructors()
 	{
-		BaseName model = new BaseName();
+		BundleApplication model;
+		model = new BundleApplication();
 		assertNotNull(model);
-		model = BaseName.builder().build();
+		model = new BundleApplication(LanguageLocale.builder().build(),
+			SetFactory.newHashSet(LanguageLocale.builder().build()));
+		assertNotNull(model);
+		model = BundleApplication.builder().build();
 		assertNotNull(model);
 	}
 
 	/**
-	 * Test method for {@link BaseName}
+	 * Test method for {@link BundleApplication}
 	 */
 	@Test
 	public void testWithBeanTester()
 	{
 		final BeanTester beanTester = new BeanTester();
-		beanTester.testBean(BaseName.class);
+		beanTester.testBean(BundleApplication.class);
 	}
 
 	/**
-	 * Test method for {@link BaseName#equals(Object)} , {@link BaseName#hashCode()} and
-	 * {@link BaseName#toString()}
+	 * Test method for {@link BundleApplication#equals(Object)} ,
+	 * {@link BundleApplication#hashCode()} and {@link BundleApplication#toString()}
 	 */
 	@Test
 	public void verifyEqualsHashcodeAndToStringContracts()
 	{
-		ContractVerifier.of(BaseName.class).verify();
+		ContractVerifier.of(BundleApplication.class).verify();
 	}
-
 }

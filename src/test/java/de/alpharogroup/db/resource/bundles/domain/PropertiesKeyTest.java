@@ -32,41 +32,40 @@ import org.testng.annotations.Test;
 import de.alpharogroup.evaluate.object.verifier.ContractVerifier;
 
 /**
- * The unit test class for the class {@link BaseName}
+ * The unit test class for the class {@link PropertiesKey}
  */
-public class BaseNameTest
+public class PropertiesKeyTest
 {
 
 	/**
-	 * Test method for {@link BaseName} constructors and builders
+	 * Test method for {@link PropertiesKey} constructors and builders
 	 */
 	@Test
 	public final void testConstructors()
 	{
-		BaseName model = new BaseName();
+		PropertiesKey model = new PropertiesKey();
 		assertNotNull(model);
-		model = BaseName.builder().build();
+		model = PropertiesKey.builder().build();
 		assertNotNull(model);
 	}
 
 	/**
-	 * Test method for {@link BaseName}
+	 * Test method for {@link PropertiesKey}
 	 */
 	@Test
 	public void testWithBeanTester()
 	{
 		final BeanTester beanTester = new BeanTester();
-		beanTester.testBean(BaseName.class);
+		beanTester.testBean(PropertiesKey.class);
 	}
 
 	/**
-	 * Test method for {@link BaseName#equals(Object)} , {@link BaseName#hashCode()} and
-	 * {@link BaseName#toString()}
+	 * Test method for {@link PropertiesKey#equals(Object)} , {@link PropertiesKey#hashCode()} and
+	 * {@link PropertiesKey#toString()}
 	 */
 	@Test
 	public void verifyEqualsHashcodeAndToStringContracts()
 	{
-		ContractVerifier.of(BaseName.class).verify();
+		ContractVerifier.of(PropertiesKey.class).verify();
 	}
-
 }
