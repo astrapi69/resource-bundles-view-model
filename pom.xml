@@ -28,6 +28,8 @@
 		<test-objects.version>5.2</test-objects.version>
 		<!-- MEANBEAN version -->
 		<meanbean.version>2.0.3</meanbean.version>
+		<!-- SILLY-COLLECTIONS version -->
+		<silly-collections.version>5.2.1</silly-collections.version>
 		<!-- JOBJ-CONTRACT-VERIFIER version -->
 		<jobj-contract-verifier.version>3.2</jobj-contract-verifier.version>
 	</properties>
@@ -56,7 +58,7 @@
 		<system>github.com</system>
 		<url>https://github.com/astrapi69/${project.artifactId}/issues</url>
 	</issueManagement>
-	
+
 	<dependencyManagement>
 
 		<dependencies>
@@ -83,6 +85,12 @@
 				<groupId>de.alpharogroup</groupId>
 				<artifactId>jobj-contract-verifier</artifactId>
 				<version>${jobj-contract-verifier.version}</version>
+			</dependency>
+			<!-- SILLY-COLLECTIONS DEPENDENCY -->
+			<dependency>
+				<groupId>de.alpharogroup</groupId>
+				<artifactId>silly-collections</artifactId>
+				<version>${silly-collections.version}</version>
 			</dependency>
 
 		</dependencies>
@@ -112,6 +120,12 @@
 		<dependency>
 			<groupId>org.meanbean</groupId>
 			<artifactId>meanbean</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- SILLY-COLLECTIONS DEPENDENCY -->
+		<dependency>
+			<groupId>de.alpharogroup</groupId>
+			<artifactId>silly-collections</artifactId>
 			<scope>test</scope>
 		</dependency>
 

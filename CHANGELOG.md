@@ -4,6 +4,10 @@
 Version 1.1
 -------------
 
+ADDED:
+ 
+- new test dependency silly-collections added
+
 CHANGED:
 
 - update of parent version to 5

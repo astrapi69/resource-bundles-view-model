@@ -43,7 +43,10 @@ public class LanguageTest
 	@Test
 	public final void testConstructors()
 	{
-		Language model = new Language();
+		Language model;
+		model = new Language();
+		assertNotNull(model);
+		model = new Language("en");
 		assertNotNull(model);
 		model = Language.builder().build();
 		assertNotNull(model);

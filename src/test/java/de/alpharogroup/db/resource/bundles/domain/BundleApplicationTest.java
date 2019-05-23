@@ -29,6 +29,7 @@ import static org.testng.AssertJUnit.assertNotNull;
 import org.meanbean.test.BeanTester;
 import org.testng.annotations.Test;
 
+import de.alpharogroup.collections.set.SetFactory;
 import de.alpharogroup.evaluate.object.verifier.ContractVerifier;
 
 /**
@@ -43,7 +44,11 @@ public class BundleApplicationTest
 	@Test
 	public final void testConstructors()
 	{
-		BundleApplication model = new BundleApplication();
+		BundleApplication model;
+		model = new BundleApplication();
+		assertNotNull(model);
+		model = new BundleApplication(LanguageLocale.builder().build(),
+			SetFactory.newHashSet(LanguageLocale.builder().build()));
 		assertNotNull(model);
 		model = BundleApplication.builder().build();
 		assertNotNull(model);
