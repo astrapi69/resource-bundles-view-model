@@ -47,7 +47,7 @@ public class Country extends NameDomainObject<Integer>
 	private static final long serialVersionUID = 1L;
 
 	/** The iso3166 name with two characters. */
-	private String iso3166A2name;
+	private String iso3166a2name;
 
 	/**
 	 * Instantiates a new countries.
@@ -61,7 +61,7 @@ public class Country extends NameDomainObject<Integer>
 	public Country(String name, String iso3166a2name)
 	{
 		super(name);
-		iso3166A2name = iso3166a2name;
+		this.iso3166a2name = iso3166a2name;
 	}
 
 }
