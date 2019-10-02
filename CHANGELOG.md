@@ -1,6 +1,13 @@
 ## Change log
 ----------------------
 
+Version 1.1.1
+-------------
+
+CHANGED:
+
+- update of misleading attribute in Country class from iso3166A2name to iso3166a2name
+
 Version 1.1
 -------------
 
