@@ -24,27 +24,22 @@
  */
 package de.alpharogroup.db.resource.bundles.domain;
 
-import java.util.UUID;
+import java.util.Locale;
+import java.util.Properties;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-/**
- * The domain class {@link Country} is keeping the information for all countries in the world
- */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder(toBuilder = true)
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Country
+public class ImprortableBundleName
 {
-
-	UUID id;
-	Integer version;
-	String name;
-
-	/** The iso3166 name with two characters. */
-	String iso3166a2name;
-
+	String baseName;
+	String bundleappname;
+	String filepath;
+	Locale locale;
+	Properties properties;
 }

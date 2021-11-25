@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2019 Asterios Raptis
+ * Copyright (C) 2021 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -25,61 +25,27 @@
 package de.alpharogroup.db.resource.bundles.domain;
 
 import java.util.Set;
+import java.util.UUID;
 
-import de.alpharogroup.domain.VersionableNameBaseDomainObject;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import lombok.*;
+import lombok.experimental.FieldDefaults;
 
 /**
  * The class {@link BundleApplication}.
  */
-@Getter
-@Setter
-@ToString(callSuper = true)
-@EqualsAndHashCode(callSuper = true)
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class BundleApplication extends VersionableNameBaseDomainObject<Integer>
+@Builder(toBuilder = true)
+@FieldDefaults(level = AccessLevel.PRIVATE)
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class BundleApplication
 {
-
-	/**
-	 * The serialVersionUID.
-	 */
-	private static final long serialVersionUID = 1L;
-
-	/**
-	 * The default locale of this bundle application.
-	 */
-	private LanguageLocale defaultLocale;
-
-	/**
-	 * The supported locale objects that are mandatory for this bundle application.
-	 */
-	private Set<LanguageLocale> supportedLocales;
-
-
-	/**
-	 * Instantiates a new {@link BundleApplication} domain object.
-	 *
-	 * @param name
-	 *            the name
-	 * @param bundleNames
-	 *            the bundle names
-	 * @param defaultLocale
-	 *            the default locale
-	 */
-	@Builder
-	BundleApplication(final String name, final LanguageLocale defaultLocale,
-		final Set<LanguageLocale> supportedLocales)
-	{
-		super(name);
-		this.defaultLocale = defaultLocale;
-		this.supportedLocales = supportedLocales;
-	}
-
+	UUID id;
+	Integer version;
+	String name;
+	LanguageLocale defaultLocale;
+	Set<LanguageLocale> supportedLocales;
 }

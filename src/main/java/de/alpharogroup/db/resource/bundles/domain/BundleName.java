@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2019 Asterios Raptis
+ * Copyright (C) 2021 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -24,37 +24,28 @@
  */
 package de.alpharogroup.db.resource.bundles.domain;
 
-import de.alpharogroup.domain.VersionableBaseDomainObject;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import java.util.UUID;
+
+import lombok.*;
+import lombok.experimental.FieldDefaults;
 
 /**
- * The class {@link BundleName}.
+ * The class {@link BundleName}
  */
-@Getter
-@Setter
-@ToString(callSuper = true)
-@EqualsAndHashCode(callSuper = true)
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
-public class BundleName extends VersionableBaseDomainObject<Integer>
+@Builder(toBuilder = true)
+@FieldDefaults(level = AccessLevel.PRIVATE)
+public class BundleName
 {
-	/**
-	 * The serialVersionUID.
-	 */
-	private static final long serialVersionUID = 1L;
-
+	UUID id;
+	Integer version;
 	/** The bundle name. */
-	private BaseName baseName;
+	BaseName baseName;
 
 	/** The filepath. */
-	private String filepath;
+	String filepath;
 
 	/** The locale. */
 	private LanguageLocale locale;

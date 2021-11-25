@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2019 Asterios Raptis
+ * Copyright (C) 2021 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -24,47 +24,27 @@
  */
 package de.alpharogroup.db.resource.bundles.domain;
 
-import de.alpharogroup.domain.VersionableNameBaseDomainObject;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import java.util.UUID;
+
+import lombok.*;
+import lombok.experimental.FieldDefaults;
 
 /**
  * The class {@link Language}.
  */
-@Getter
-@Setter
-@ToString(callSuper = true)
-@EqualsAndHashCode(callSuper = true)
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Language extends VersionableNameBaseDomainObject<Integer>
+@Builder(toBuilder = true)
+@FieldDefaults(level = AccessLevel.PRIVATE)
+public class Language
 {
 
-	/**
-	 * The serialVersionUID.
-	 */
-	private static final long serialVersionUID = 1L;
+	UUID id;
+	Integer version;
+	String name;
 
 	/** The iso639_1 code with two characters. */
-	private String iso639Dash1;
+	String iso639Dash1;
 
-	/**
-	 * Instantiates a new {@link Language} domain object.
-	 *
-	 * @param name
-	 *            the name
-	 * @param iso639Dash1
-	 *            the iso 639 dash 1
-	 */
-	@Builder
-	Language(String name, String iso639Dash1)
-	{
-		super(name);
-		this.iso639Dash1 = iso639Dash1;
-	}
 }
