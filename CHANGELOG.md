@@ -1,8 +1,15 @@
 ## Change log
 ----------------------
 
+Version 1.3-SNAPSHOT
+-------------
+
 Version 1.2
 -------------
+
+ADDED:
+
+- gradle as build system
 
 Version 1.1.1
 -------------
