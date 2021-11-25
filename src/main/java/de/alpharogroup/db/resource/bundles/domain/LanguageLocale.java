@@ -24,32 +24,28 @@
  */
 package de.alpharogroup.db.resource.bundles.domain;
 
-import de.alpharogroup.domain.VersionableBaseDomainObject;
+import java.util.UUID;
+
+import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.experimental.FieldDefaults;
 
 /**
  * The class {@link LanguageLocale}.
  */
-@Getter
-@Setter
-@ToString(callSuper = true)
-@EqualsAndHashCode(callSuper = true)
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
-public class LanguageLocale extends VersionableBaseDomainObject<Integer>
+@Builder(toBuilder = true)
+@FieldDefaults(level = AccessLevel.PRIVATE)
+public class LanguageLocale
 {
-	/**
-	 * The serialVersionUID.
-	 */
-	private static final long serialVersionUID = 1L;
 
+	UUID id;
+	Integer version;
 	/** The locale of this entry. */
-	private String locale;
+	String locale;
 }

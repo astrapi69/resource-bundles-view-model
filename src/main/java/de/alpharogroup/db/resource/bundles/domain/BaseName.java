@@ -23,41 +23,26 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 package de.alpharogroup.db.resource.bundles.domain;
+import java.util.UUID;
 
-import de.alpharogroup.domain.VersionableNameBaseDomainObject;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.experimental.FieldDefaults;
 
 /**
- * The class {@link BaseName}.
+ * The class {@link BaseName}
  */
-@Getter
-@Setter
-@ToString(callSuper = true)
-@EqualsAndHashCode(callSuper = true)
+@Data
+@AllArgsConstructor
 @NoArgsConstructor
-public class BaseName extends VersionableNameBaseDomainObject<Integer>
+@Builder(toBuilder = true)
+@FieldDefaults(level = AccessLevel.PRIVATE)
+public class BaseName
 {
-
-	/**
-	 * The serialVersionUID.
-	 */
-	private static final long serialVersionUID = 1L;
-
-	/**
-	 * Instantiates a new {@link BaseName} domain object.
-	 *
-	 * @param name
-	 *            the name
-	 */
-	@Builder
-	BaseName(String name)
-	{
-		super(name);
-	}
-
+	UUID id;
+	Integer version;
+	String name;
 }

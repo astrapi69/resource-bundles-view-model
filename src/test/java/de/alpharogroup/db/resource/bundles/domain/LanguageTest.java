@@ -46,20 +46,8 @@ public class LanguageTest
 		Language model;
 		model = new Language();
 		assertNotNull(model);
-		model = new Language("en");
-		assertNotNull(model);
 		model = Language.builder().build();
 		assertNotNull(model);
-	}
-
-	/**
-	 * Test method for {@link Language}
-	 */
-	@Test
-	public void testWithBeanTester()
-	{
-		final BeanTester beanTester = new BeanTester();
-		beanTester.testBean(Language.class);
 	}
 
 	/**

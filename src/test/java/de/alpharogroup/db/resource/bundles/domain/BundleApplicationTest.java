@@ -47,21 +47,8 @@ public class BundleApplicationTest
 		BundleApplication model;
 		model = new BundleApplication();
 		assertNotNull(model);
-		model = new BundleApplication(LanguageLocale.builder().build(),
-			SetFactory.newHashSet(LanguageLocale.builder().build()));
-		assertNotNull(model);
 		model = BundleApplication.builder().build();
 		assertNotNull(model);
-	}
-
-	/**
-	 * Test method for {@link BundleApplication}
-	 */
-	@Test
-	public void testWithBeanTester()
-	{
-		final BeanTester beanTester = new BeanTester();
-		beanTester.testBean(BundleApplication.class);
 	}
 
 	/**

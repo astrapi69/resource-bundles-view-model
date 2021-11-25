@@ -50,16 +50,6 @@ public class PropertiesValueTest
 	}
 
 	/**
-	 * Test method for {@link PropertiesValue}
-	 */
-	@Test
-	public void testWithBeanTester()
-	{
-		final BeanTester beanTester = new BeanTester();
-		beanTester.testBean(PropertiesValue.class);
-	}
-
-	/**
 	 * Test method for {@link PropertiesValue#equals(Object)} , {@link PropertiesValue#hashCode()}
 	 * and {@link PropertiesValue#toString()}
 	 */

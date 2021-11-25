@@ -50,16 +50,6 @@ public class BaseNameTest
 	}
 
 	/**
-	 * Test method for {@link BaseName}
-	 */
-	@Test
-	public void testWithBeanTester()
-	{
-		final BeanTester beanTester = new BeanTester();
-		beanTester.testBean(BaseName.class);
-	}
-
-	/**
 	 * Test method for {@link BaseName#equals(Object)} , {@link BaseName#hashCode()} and
 	 * {@link BaseName#toString()}
 	 */

@@ -180,7 +180,7 @@ test {
 dependencies {
     compileOnly("org.projectlombok:lombok:$lombokVersion")
     annotationProcessor("org.projectlombok:lombok:$lombokVersion")
-    implementation("de.alpharogroup:domain-api:$domainApiVersion")
+    implementation("com.fasterxml.jackson.core:jackson-databind:$jacksonVersion")
     testImplementation("de.alpharogroup:jobj-contract-verifier:$jobjContractVerifierVersion")
     testImplementation("de.alpharogroup:test-objects:$testObjectsVersion")
     testImplementation("org.meanbean:meanbean:$meanbeanVersion")

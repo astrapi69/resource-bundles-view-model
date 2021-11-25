@@ -50,16 +50,6 @@ public class CountryTest
 	}
 
 	/**
-	 * Test method for {@link Country}
-	 */
-	@Test
-	public void testWithBeanTester()
-	{
-		final BeanTester beanTester = new BeanTester();
-		beanTester.testBean(Country.class);
-	}
-
-	/**
 	 * Test method for {@link Country#equals(Object)} , {@link Country#hashCode()} and
 	 * {@link Country#toString()}
 	 */

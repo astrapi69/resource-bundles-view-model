@@ -50,16 +50,6 @@ public class ResourcebundleTest
 	}
 
 	/**
-	 * Test method for {@link Resourcebundle}
-	 */
-	@Test
-	public void testWithBeanTester()
-	{
-		final BeanTester beanTester = new BeanTester();
-		beanTester.testBean(Resourcebundle.class);
-	}
-
-	/**
 	 * Test method for {@link Resourcebundle#equals(Object)} , {@link Resourcebundle#hashCode()} and
 	 * {@link Resourcebundle#toString()}
 	 */

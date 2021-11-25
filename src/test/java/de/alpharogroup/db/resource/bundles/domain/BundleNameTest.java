@@ -52,16 +52,6 @@ public class BundleNameTest
 	}
 
 	/**
-	 * Test method for {@link BundleName}
-	 */
-	@Test
-	public void testWithBeanTester()
-	{
-		final BeanTester beanTester = new BeanTester();
-		beanTester.testBean(BundleName.class);
-	}
-
-	/**
 	 * Test method for {@link BundleName#equals(Object)} , {@link BundleName#hashCode()} and
 	 * {@link BundleName#toString()}
 	 */

@@ -50,16 +50,6 @@ public class LanguageLocaleTest
 	}
 
 	/**
-	 * Test method for {@link LanguageLocale}
-	 */
-	@Test
-	public void testWithBeanTester()
-	{
-		final BeanTester beanTester = new BeanTester();
-		beanTester.testBean(LanguageLocale.class);
-	}
-
-	/**
 	 * Test method for {@link LanguageLocale#equals(Object)} , {@link LanguageLocale#hashCode()} and
 	 * {@link LanguageLocale#toString()}
 	 */
