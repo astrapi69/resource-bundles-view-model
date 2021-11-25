@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2019 Asterios Raptis
+ * Copyright (C) 2021 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -26,10 +26,9 @@ package de.alpharogroup.db.resource.bundles.domain;
 
 import static org.testng.AssertJUnit.assertNotNull;
 
-import org.meanbean.test.BeanTester;
 import org.testng.annotations.Test;
 
-import de.alpharogroup.evaluate.object.verifier.ContractVerifier;
+import io.github.astrapi69.evaluate.object.verifier.ContractVerifier;
 
 /**
  * The unit test class for the class {@link PropertiesValue}

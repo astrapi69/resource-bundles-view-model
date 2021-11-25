@@ -15,7 +15,7 @@ Version 1.1
 -------------
 
 ADDED:
- 
+
 - new test dependency silly-collections added
 
 CHANGED:
@@ -29,7 +29,7 @@ Version 1
 -------------
 
 ADDED:
- 
+
 - this changelog file
 - initial view model object created
 
