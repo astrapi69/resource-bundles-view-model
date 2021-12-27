@@ -27,6 +27,7 @@ package de.alpharogroup.db.resource.bundles.domain;
 import java.util.Locale;
 import java.util.Properties;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -35,6 +36,7 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @Builder(toBuilder = true)
 @FieldDefaults(level = AccessLevel.PRIVATE)
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ImprortableBundleName
 {
 	String baseName;
